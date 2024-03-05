@@ -7,6 +7,9 @@ public class ArgMethod {
         int age = 6;
 
         hello(name, age);
+        hello(name, age);
+        hello(name, age);
+        hello(name, age);
     }
 
     public static void hello(String name, int age) {
