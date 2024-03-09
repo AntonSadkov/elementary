@@ -9,6 +9,6 @@ public class SqArea {
     }
 
     public static void main(String[] args) {
-        System.out.println(square(6, 2));
+        System.out.println("p = 6, k = 2, s = " + square(6, 2));
     }
 }
