@@ -7,7 +7,7 @@ public class Point {
     }
 
     public static void main(String[] args) {
-        double result = distance(1, 2, 3, 4);
+        double result = distance(1, 2, 3, 2);
         System.out.printf("Result (1, 2) to (2, 0) %.4f", result);
     }
 }
