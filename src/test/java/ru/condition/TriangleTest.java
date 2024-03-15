@@ -8,13 +8,13 @@ class TriangleTest {
 
     @Test
     void whenExist() {
-        assertThat(Triangle.exist(3,2,2))
+        assertThat(Triangle.exist(3, 2, 2))
                 .isTrue();
     }
 
     @Test
     void whenNotExist() {
-        assertThat(Triangle.exist(3,1,2))
+        assertThat(Triangle.exist(3, 1, 2))
                 .isFalse();
     }
 }
