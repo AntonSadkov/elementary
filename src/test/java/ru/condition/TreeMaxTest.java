@@ -50,7 +50,7 @@ class TreeMaxTest {
     }
 
     @Test
-    void SecondEqThird() {
+    void secondEqThird() {
         int expected = 10;
         assertThat(TreeMax.max(1, 10, 10))
                 .isEqualTo(expected);
