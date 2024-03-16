@@ -2,19 +2,17 @@ package ru.condition;
 
 public class ChessBoard {
     public static int way(int x1, int y1, int x2, int y2) {
-        int result = 0;
         if (checkAllRangeCoordinates(x1, y1, x2, y2)) {
-            result = movePossibility(x1, y1, x2, y2);
+            return movePossibility(x1, y1, x2, y2);
         }
-        return result;
+        return 0;
     }
 
     private static int movePossibility(int x1, int y1, int x2, int y2) {
-        int result = 0;
         if (Math.abs(x2 - x1) == Math.abs(y2 - y1)) {
-            result = Math.abs(x2 - x1);
+            return Math.abs(x2 - x1);
         }
-        return result;
+        return 0;
     }
 
     private static boolean checkAllRangeCoordinates(int x1, int y1, int x2, int y2) {
