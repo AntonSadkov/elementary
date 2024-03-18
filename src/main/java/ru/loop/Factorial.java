@@ -1,7 +1,7 @@
 package ru.loop;
 
 public class Factorial {
-    public static int CalculatorFactorial(int n) {
+    public static int calculatorFactorial(int n) {
         int result = 1;
         for (int i = 1; i <= n; i++) {
             result *= i;

@@ -9,14 +9,14 @@ class FactorialTest {
     @Test
     void whenCalculatorFactorialForFiveThenOneHundredTwenty() {
         int expected = 120;
-        assertThat(Factorial.CalculatorFactorial(5))
+        assertThat(Factorial.calculatorFactorial(5))
                 .isEqualTo(expected);
     }
 
     @Test
     void whenCalculatorFactorialForZeroThenOne() {
         int expected = 1;
-        assertThat(Factorial.CalculatorFactorial(0))
+        assertThat(Factorial.calculatorFactorial(0))
                 .isEqualTo(expected);
     }
 }
