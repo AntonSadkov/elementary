@@ -12,16 +12,11 @@ public class Counter {
     public static int sumByEven(int start, int finish) {
         int result = 0;
         for (int i = start; i <= finish; i++) {
-            result += checkEven(i);
+            if (i % 2 == 0) {
+                result += i;
+            }
         }
         return result;
-    }
-
-    private static int checkEven(int num) {
-        if (num % 2 == 0) {
-            return num;
-        }
-        return 0;
     }
 
     public static void main(String[] args) {
