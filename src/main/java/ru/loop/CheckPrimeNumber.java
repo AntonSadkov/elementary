@@ -2,12 +2,14 @@ package ru.loop;
 
 public class CheckPrimeNumber {
     public static boolean check(int number) {
-        int count = 0;
-        for (int i = number; i >= 1; i--) {
-            if (i != 1 && number % i == 0) {
-                count++;
+        if (number < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
             }
         }
-        return count == 1;
+        return true;
     }
 }
