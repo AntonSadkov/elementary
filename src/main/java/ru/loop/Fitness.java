@@ -6,7 +6,6 @@ public class Fitness {
         while (pullWeightOne <= pullWeightTwo) {
             pullWeightOne *= 3;
             pullWeightTwo *= 2;
-
             month++;
         }
         return month;
