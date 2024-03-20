@@ -3,11 +3,10 @@ package ru.loop;
 public class PrimeNumber {
     public static int calc(int lastNumber) {
         int result = 0;
-        while (lastNumber != 0) {
-            if (CheckPrimeNumber.check(lastNumber)) {
+        for (int i = 2; i <= lastNumber; i++) {
+            if (CheckPrimeNumber.check(i)) {
                 result++;
             }
-            lastNumber--;
         }
         return result;
     }
