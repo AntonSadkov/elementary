@@ -25,4 +25,24 @@ class MatrixCheckTest {
         };
         assertThat(MatrixCheck.monoHorizontal(input, 1)).isFalse();
     }
+
+    @Test
+    void whenHasMonoVertical() {
+        char[][] input = {
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+        };
+        assertThat(MatrixCheck.monoVertical(input, 1)).isTrue();
+    }
+
+    @Test
+    void whenNotMonoVertical() {
+        char[][] input = {
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+        };
+        assertThat(MatrixCheck.monoVertical(input, 2)).isFalse();
+    }
 }
