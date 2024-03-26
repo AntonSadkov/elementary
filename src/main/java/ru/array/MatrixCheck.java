@@ -1,6 +1,14 @@
 package ru.array;
 
 public class MatrixCheck {
+    public static char[] extractDiagonal(char[][] board) {
+        char[] result = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            result[i] = board[i][i];
+        }
+        return result;
+    }
+
     public static boolean monoHorizontal(char[][] board, int row) {
         for (int i = 0; i < board[row].length; i++) {
             if (board[row][i] != 'X') {
