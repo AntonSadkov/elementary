@@ -11,7 +11,7 @@ class MatrixCheckTest {
         char[][] input = {
                 {' ', ' ', ' '},
                 {'X', 'X', 'X'},
-                {' ', ' ', ' '},
+                {' ', ' ', ' '}
         };
         assertThat(MatrixCheck.monoHorizontal(input, 1)).isTrue();
     }
@@ -21,7 +21,7 @@ class MatrixCheckTest {
         char[][] input = {
                 {' ', ' ', ' '},
                 {'X', 'X', ' '},
-                {' ', ' ', ' '},
+                {' ', ' ', ' '}
         };
         assertThat(MatrixCheck.monoHorizontal(input, 1)).isFalse();
     }
@@ -31,7 +31,7 @@ class MatrixCheckTest {
         char[][] input = {
                 {' ', 'X', ' '},
                 {' ', 'X', ' '},
-                {' ', 'X', ' '},
+                {' ', 'X', ' '}
         };
         assertThat(MatrixCheck.monoVertical(input, 1)).isTrue();
     }
@@ -41,7 +41,7 @@ class MatrixCheckTest {
         char[][] input = {
                 {' ', 'X', ' '},
                 {' ', 'X', ' '},
-                {' ', 'X', ' '},
+                {' ', 'X', ' '}
         };
         assertThat(MatrixCheck.monoVertical(input, 2)).isFalse();
     }
@@ -89,7 +89,7 @@ class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
-                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '}
         };
         assertThat(MatrixCheck.isWin(input)).isTrue();
     }
@@ -101,7 +101,7 @@ class MatrixCheckTest {
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', 'X', ' ', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
-                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '}
         };
         assertThat(MatrixCheck.isWin(input)).isFalse();
     }
@@ -113,7 +113,7 @@ class MatrixCheckTest {
                 {' ', ' ', ' ', ' ', ' '},
                 {'X', 'X', 'X', 'X', 'X'},
                 {' ', ' ', 'X', ' ', ' '},
-                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '}
         };
         assertThat(MatrixCheck.isWin(input)).isTrue();
     }
@@ -125,7 +125,19 @@ class MatrixCheckTest {
                 {' ', 'X', ' ', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', ' ', 'X', ' '},
-                {' ', ' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', ' ', 'X'}
+        };
+        assertThat(MatrixCheck.isWin(input)).isFalse();
+    }
+
+    @Test
+    void whenDataGoingLimitThenFalse() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X', 'X'}
         };
         assertThat(MatrixCheck.isWin(input)).isFalse();
     }
