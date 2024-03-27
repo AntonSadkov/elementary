@@ -3,7 +3,7 @@ package ru.array;
 public class MatrixCheck {
     public static boolean isWin(char[][] board) {
         for (int i = 0; i < board.length; i++) {
-            if (board[i].length > 5) {
+            if (board.length > 5 || board[i].length > 5) {
                 return false;
             } else if (board[i][i] == 'X') {
                 return monoHorizontal(board, i) || monoVertical(board, i);

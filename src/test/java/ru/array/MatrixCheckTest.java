@@ -131,13 +131,26 @@ class MatrixCheckTest {
     }
 
     @Test
-    void whenDataGoingLimitThenFalse() {
+    void whenDataRowGoingLimitThenFalse() {
         char[][] input = {
                 {' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', ' ', ' ', ' '},
                 {'X', 'X', 'X', 'X', 'X', 'X'}
+        };
+        assertThat(MatrixCheck.isWin(input)).isFalse();
+    }
+
+    @Test
+    void whenDataColGoingLimitThenFalse() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'}
         };
         assertThat(MatrixCheck.isWin(input)).isFalse();
     }
