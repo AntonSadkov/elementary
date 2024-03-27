@@ -81,4 +81,52 @@ class MatrixCheckTest {
         assertThat(MatrixCheck.extractDiagonal(input))
                 .containsExactly(expected);
     }
+
+    @Test
+    void whenDataMonoVerticalByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        assertThat(MatrixCheck.isWin(input)).isTrue();
+    }
+
+    @Test
+    void whenDataNotMonoByTrueThenFalse() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        assertThat(MatrixCheck.isWin(input)).isFalse();
+    }
+
+    @Test
+    void whenDataMonoHorizontalByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        assertThat(MatrixCheck.isWin(input)).isTrue();
+    }
+
+    @Test
+    void whenDataMonoByTrueThenTrue() {
+        char[][] input = {
+                {'X', ' ', ' ', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', ' ', 'X', ' '},
+                {' ', ' ', ' ', ' ', 'X'},
+        };
+        assertThat(MatrixCheck.isWin(input)).isFalse();
+    }
 }

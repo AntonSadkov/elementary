@@ -1,6 +1,15 @@
 package ru.array;
 
 public class MatrixCheck {
+    public static boolean isWin(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X') {
+                return monoHorizontal(board, i) || monoVertical(board, i);
+            }
+        }
+        return false;
+    }
+
     public static char[] extractDiagonal(char[][] board) {
         char[] result = new char[board.length];
         for (int i = 0; i < board.length; i++) {
