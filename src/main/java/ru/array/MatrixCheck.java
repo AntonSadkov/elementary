@@ -3,7 +3,7 @@ package ru.array;
 public class MatrixCheck {
     public static boolean isWin(char[][] board) {
         for (int i = 0; i < board.length; i++) {
-            if (board[i][i] == 'X' && monoHorizontal(board, i) || monoVertical(board, i)) {
+            if (board[i][i] == 'X' && (monoHorizontal(board, i) || monoVertical(board, i))) {
                 return true;
             }
         }
@@ -34,5 +34,23 @@ public class MatrixCheck {
             }
         }
         return true;
+    }
+
+    public static boolean isWin1(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X' && (monoHorizontal(board, i) || monoVertical(board, i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isWin2(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X' && (monoHorizontal(board, i) || monoVertical(board, i))) {
+                return true;
+            }
+        }
+        return false;
     }
 }

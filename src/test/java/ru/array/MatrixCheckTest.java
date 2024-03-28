@@ -139,6 +139,6 @@ class MatrixCheckTest {
                 {' ', ' ', ' ', ' ', ' '},
                 {'X', 'X', 'X', 'X', 'X'}
         };
-        assertThat(MatrixCheck.isWin(input)).isTrue();
+        assertThat(MatrixCheck.isWin1(input)).isTrue();
     }
 }
