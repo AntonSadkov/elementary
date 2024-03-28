@@ -6,9 +6,10 @@ public class MatrixCheck {
             if (board.length > 5 || board[i].length > 5) {
                 return false;
             } else if (board[i][i] == 'X') {
-                return monoHorizontal(board, i) || monoVertical(board, i);
+                if (monoHorizontal(board, i) || monoVertical(board, i)) {
+                    return true;
+                }
             }
-
         }
         return false;
     }
