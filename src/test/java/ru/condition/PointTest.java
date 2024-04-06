@@ -62,7 +62,7 @@ class PointTest {
     @Test
     void when420To340Then2Dot23() {
         Point a = new Point(4, 2, 0);
-        Point b = new Point( 3, 4, 0);
+        Point b = new Point(3, 4, 0);
         double expected = 2.23;
         assertThat(a.distance(b))
                 .isEqualTo(expected, withPrecision(0.01));
